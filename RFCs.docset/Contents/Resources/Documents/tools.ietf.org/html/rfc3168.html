@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><!-- Mirrored from tools.ietf.org/html/rfc3168 by HTTrack Website Copier/3.x [XR&CO'2013], Tue, 23 Aug 2016 18:48:49 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><!-- Mirrored from tools.ietf.org/html/rfc3168 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Apr 2017 11:09:58 GMT --><!-- Added by HTTrack --><head><meta content="text/html;charset=utf-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
 
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     <meta content="index,follow" name="robots"/>
-    <meta content="rfcmarkup version 1.119" name="creator"/>
+    <meta content="rfcmarkup version 1.121" name="creator"/>
     <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC"/>
 <meta content="rfc2481" name="DC.Relation.Replaces"/>
 <meta content="urn:ietf:rfc:3168" name="DC.Identifier"/>
@@ -11,9 +11,24 @@
 <meta content="Floyd, Sally" name="DC.Creator"/>
 <meta content="Ramakrishnan, K. K." name="DC.Creator"/>
 <meta content="Black, David L." name="DC.Creator"/>
-<meta content="This memo specifies the incorporation of ECN (Explicit Congestion
+<meta content="This document specifies the incorporation of ECN (Explicit Congestion
 Notification) to TCP and IP, including ECN's use of two bits in the
-IP header. [STANDARDS-TRACK]" name="DC.Description.Abstract"/>
+IP header. We begin by describing TCP's use of packet drops as an
+indication of congestion. Next we explain that with the addition of
+active queue management (e.g., RED) to the Internet infrastructure,
+where routers detect congestion before the queue overflows, routers
+are no longer limited to packet drops as an indication of congestion.
+Routers can instead set the Congestion Experienced (CE) codepoint in
+the IP header of packets from ECN-capable transports. We describe when
+the CE codepoint is to be set in routers, and describe modifications
+needed to TCP to make it ECN-capable. Modifications to other transport
+protocols (e.g., unreliable unicast or multicast, reliable multicast,
+other reliable unicast transport protocols) could be considered as
+those protocols are developed and advance through the standards
+process.  We also describe in this document the issues involving the
+use of ECN within IP tunnels, and within IPsec tunnels in particular.
+One of the guiding principles for this document is that all the
+mechanisms specified here are incrementally deployable." name="DC.Description.Abstract"/>
 <meta content="The Addition of Explicit Congestion Notification (ECN) to IP" name="DC.Title"/>
 
     <link href="https://tools.ietf.org/images/rfc.png" rel="icon" type="image/png"/>
@@ -3703,7 +3718,7 @@ Acknowledgement
 Ramakrishnan, et al.        Standards Track                    [Page 63]
 
 </pre><br/>
-    <span class="noprint"><small><small>Html markup produced by rfcmarkup 1.119, available from
+    <span class="noprint"><small><small>Html markup produced by rfcmarkup 1.121, available from
       <a href="https://tools.ietf.org/tools/rfcmarkup/">https://tools.ietf.org/tools/rfcmarkup/</a>
     </small></small></span>
   </div>
@@ -3711,4 +3726,4 @@ Ramakrishnan, et al.        Standards Track                    [Page 63]
 
 
 
-</body><!-- Mirrored from tools.ietf.org/html/rfc3168 by HTTrack Website Copier/3.x [XR&CO'2013], Tue, 23 Aug 2016 18:48:49 GMT --></html>
+</body><!-- Mirrored from tools.ietf.org/html/rfc3168 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Apr 2017 11:09:58 GMT --></html>
